@@ -9,14 +9,14 @@ const server = http.createServer(app);
 // Use CORS middleware before setting up routes or socket connections
 app.use(
     cors({
-        origin: "https://chat-client-lilac.vercel.app/", // Allow requests from your React app
+        origin: "https://chat-client-lilac.vercel.app", // Allow requests from your React app
         methods: ["GET", "POST"],
     })
 );
 
 const io = new Server(server, {
     cors: {
-        origin: "https://chat-client-lilac.vercel.app/", // Allow requests from React
+        origin: "https://chat-client-lilac.vercel.app", // Allow requests from React
         methods: ["GET", "POST"],
     },
 });
